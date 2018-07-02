@@ -1,0 +1,46 @@
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('#file').change(function (e) {
+        $('#file-fake').val($('#file').val());
+    });
+});
+</script>
+<style type="text/css">
+	
+	input.fileinput-textbox {
+    float: left;
+    position: absolute;
+    width: 158px !important;
+    left: 117px;
+    display: inline-block;
+}
+
+.file-button-wrapper {
+    float: left;
+    background-color: #ffffff;
+    position:absolute;
+    margin: 0;
+    padding: 5px;
+    width: 70px;
+    height: 20px;
+    left: 273px;
+    display: inline-block;
+}
+
+.hide-file-input {
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    -ms-filter: "alpha(opacity=0)";
+    z-index: 999;
+    line-height: 0;
+    position: relative;
+    overflow:hidden;
+    width: 240px;
+}
+</style>
+<div class="editor-field" style="white-space: nowrap;">
+    <input type="file" name="file" id="file" class="hide-file-input" />
+    <input type="text" id="file-fake" class="k-textbox fileinput-textbox" />
+    <span class="file-button-wrapper"><a class="button" id="fileButton">Browse</a></span>
+</div>
